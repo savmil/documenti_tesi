@@ -1,0 +1,17 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 99fcd67eb66d402bbbd53e2d700ad629 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Icap_read_sim_behav xil_defaultlib.Icap_read_sim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.SIM_CONFIGE2(DEVICE_ID=32'b01101...
+Compiling module unisims_ver.ICAPE2(DEVICE_ID=32'b01101100011...
+Compiling module xil_defaultlib.icap_template
+Compiling module xil_defaultlib.debouncer
+Compiling module xil_defaultlib.icap
+Compiling module xil_defaultlib.Icap_read_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Icap_read_sim_behav
