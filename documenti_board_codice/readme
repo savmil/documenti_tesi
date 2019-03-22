@@ -1,0 +1,10 @@
+gaffe mi ha aiutato nel capire che ci volesse tutto il bitstream descritto nell ug470, tranne il controllo del crc per capicare un bitstream custom nella board
+
+qspiflash è il supporto per scrivere sulla flash
+
+ug470 da i codici per effettuare lettura e scrittura della board
+
+ug835 comandi tcl utilizzati nell' approccio jtag
+
+ug908 proprietà da dare nella generazione del bitstream ed mi ha aiutato nel debug
+

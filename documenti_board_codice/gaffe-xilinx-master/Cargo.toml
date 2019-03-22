@@ -1,0 +1,33 @@
+[package]
+name = "gaffe-xilinx"
+version = "0.1.1"
+authors = ["Rick Altherr <kc8apf@kc8apf.net>"]
+description = "Parsers and manipulation tools for Xilinx bitstream formats"
+repository = "https://github.com/gaffe-logic/gaffe-logic.git"
+readme = "README.md"
+keywords = ["xilinx", "fpga"]
+categories = ["hardware-support", "parser-implementations"]
+license = "Apache-2.0"
+
+[dependencies]
+byteorder = "1.2"
+derive_more = "0.11"
+env_logger = "0.5.10"
+failure = "0.1"
+hex = "0.3"
+log = "0.4"
+packed_struct = "0.2"
+packed_struct_codegen = "0.2"
+serde = "1.0"
+serde_derive = "1.0"
+serde_yaml = "0.7"
+serde_test = "1.0"
+smart-default = "0.2"
+structopt = "0.2.8"
+strum = "0.9"
+strum_macros = "0.9"
+twoway = "0.1"
+
+[badges]
+travis-ci = { repository = "gaffe-logic/gaffe-xilinx" }
+maintenance = { status = "actively-developed" }
