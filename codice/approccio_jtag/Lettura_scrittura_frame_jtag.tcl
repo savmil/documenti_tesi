@@ -22,6 +22,12 @@
 #---------------------------------------------------------------------------------------------------------------------
 # Defines for readback capture routine
 #---------------------------------------------------------------------------------------------------------------------
+# l' intestazione del bitstream caricato è la stessa di quella del documento UG470 ma con la differenza che non vi è 
+# la scrittura del codice CRC relativo al bitstream caricato, dopo l' intestazione è presente il frame di cui ho fatto 
+# readback, per scrivere una word bisogna scrivere un frame dummy prima di vedere la word voluta (per il momento scrivo 
+# un intero frame), il frame dummy va dopo il bitstream da caricare ma va indicato in dimensione nel registro FRDI, dopodichè
+# il trailer del frame è uguale a quello del UG470 e bisogna dare delle NOOP per capircare il bitstream (se ne sono presenti
+# di più vengono ignorate)
 set file_log ____rdbk.log
 set prog_ctrl 1
 set fileOutput 0

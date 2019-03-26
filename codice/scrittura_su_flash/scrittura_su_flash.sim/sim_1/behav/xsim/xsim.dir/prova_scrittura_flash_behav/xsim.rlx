@@ -1,0 +1,12 @@
+
+{ 
+    crc :  9093763617435615447  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto e1bfd316390b4192b9c7448cd5db6c6f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot prova_scrittura_flash_behav xil_defaultlib.prova_scrittura_flash xil_defaultlib.glbl" , 
+    buildDate : "Jun 14 2018" , 
+    buildTime : "20:07:38" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/prova_scrittura_flash_behav/xsimk\"   \"xsim.dir/prova_scrittura_flash_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/prova_scrittura_flash_behav/obj/xsim_1.lnx64.o\" \"/opt/Xilinx/Vivado/2018.2/lib/lnx64.o/librdi_simulator_kernel.so\"  \"/opt/Xilinx/Vivado/2018.2/lib/lnx64.o/librdi_simbridge_kernel.so\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

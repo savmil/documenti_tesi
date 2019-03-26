@@ -1,0 +1,12 @@
+0.6
+2018.2
+Jun 14 2018
+20:07:38
+/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sim_1/new/testbench_scrittura.sv,1553501616,systemVerilog,,,,testbench_scrittura,,,../../../../scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/imports/new/debouncer.sv,1553157931,systemVerilog,,/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/scrittura_su_flash.sv,,debouncer,,,../../../../scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/imports/new/prova_scrittura_flash.sv,1553385306,systemVerilog,,,,prova_scrittura_flash,,,../../../../scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/imports/rtl/llqspi.v,1549284907,verilog,,/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/imports/rtl/wbqspiflash.v,,llqspi,,,../../../../scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/imports/rtl/wbqspiflash.v,1549284587,verilog,,,,wbqspiflash,,,../../../../scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v,1553515431,verilog,,,,clk_wiz_0;clk_wiz_0_clk_wiz_0_clk_wiz;glbl,,,../../../../scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/ip/ila/sim/ila.v,1553269968,verilog,,/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v,,ila,,,../../../../scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/scrittura_su_flash.sv,1553522614,systemVerilog,,/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sim_1/new/testbench_scrittura.sv,,scrittura_su_flash,,,../../../../scrittura_su_flash.srcs/sources_1/ip/clk_wiz_0,,,,,

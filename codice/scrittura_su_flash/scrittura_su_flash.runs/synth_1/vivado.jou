@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Mar 26 23:19:11 2019
+# Process ID: 20400
+# Current directory: /home/saverio/scrittura_su_flash/scrittura_su_flash.runs/synth_1
+# Command line: vivado -log scrittura_su_flash.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source scrittura_su_flash.tcl
+# Log file: /home/saverio/scrittura_su_flash/scrittura_su_flash.runs/synth_1/scrittura_su_flash.vds
+# Journal file: /home/saverio/scrittura_su_flash/scrittura_su_flash.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source scrittura_su_flash.tcl -notrace

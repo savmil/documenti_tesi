@@ -1,0 +1,7 @@
+Running: xsim.dir/prova_scrittura_flash_behav/xsimk -simmode gui -wdb prova_scrittura_flash_behav.wdb -simrunnum 0 -socket 42329
+Design successfully loaded
+Design Loading Memory Usage: 42628 KB (Peak: 42628 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 124624 KB (Peak: 189900 KB)
+Simulation CPU Usage: 30 ms

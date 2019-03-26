@@ -1,0 +1,11 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto e1bfd316390b4192b9c7448cd5db6c6f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_scrittura_behav xil_defaultlib.testbench_scrittura xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sim_1/new/testbench_scrittura.sv:31]
+ERROR: [VRFC 10-2063] Module <debouncer> not found while processing module instance <debounce1> [/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/scrittura_su_flash.sv:54]
+ERROR: [VRFC 10-2063] Module <clk_wiz_0> not found while processing module instance <clk_gen> [/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/scrittura_su_flash.sv:59]
+ERROR: [VRFC 10-2063] Module <STARTUPE2> not found while processing module instance <STARTUPE2_inst> [/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/scrittura_su_flash.sv:60]
+ERROR: [VRFC 10-2063] Module <ila> not found while processing module instance <ILA_inst> [/home/saverio/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/scrittura_su_flash.sv:176]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
