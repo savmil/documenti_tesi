@@ -30,7 +30,7 @@ module icap(
    output reg[4:0] state
    //output reg data_valid_o
 );
-    reg [7:0] i;
+    reg [9:0] i;
     wire    [31:0]  icap_data_i;
     reg     [31:0]  icap_data_o;
     reg     icap_enable;
@@ -39,6 +39,7 @@ module icap(
     wire    avvia_lettura;
     wire    reset;
     reg    avvio;
+    reg [14911:0] dati=14912'h30022001000000003002000100000000300080010000000020000000300080010000000720000000200000003001200102003fe53001c0010000000030018001036310933000800100000009200000003000c001000004013000a001000005013000c0010000000030030001000000002000000020000000200000002000000020000000200000002000000020000000300020010040011f30008001000000012000000030004000500000CA000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000EC0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000020000000300080010000000a200000003000800100000003200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000003000800100000005200000003000200103be00003000c001000005013000a001000005012000000020000000300080010000000d2000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000;
     //reg [4:0]   state;
     icap_template icap(.clk_i(clk_i),.data_i(icap_data_o),.write_i(icap_write),.en_i(icap_enable),.data_o(icap_data_i));
     debouncer debounce1(.clk(clk_i),.PB(readstrobe_i),.PB_state(avvia_lettura));
@@ -53,7 +54,7 @@ module icap(
         //data_valid_o<=0;
     end
     //i dati devono essere scritti facendo il reverse di ogni gruppo di 8 bit presente in una word ed allo stesso modo devono essere letti
-    //per i comandi dati all' icap riferirsi allo script ed alla documentazione UG407 dove vengono descritti dato che l' appoccio jtag ed icap funzionano con gli stessi comandi
+    //per i comandi dati all' icap riferirsi allo script ed alla documentazione UG470 dove vengono descritti dato che l' appoccio jtag ed icap funzionano con gli stessi comandi
     /*la differenza tra jtag ed icap sta nel fatto che icap richiede due segnali di controllo, uno per attivare 
     l' icap (abilitato basso) ed un altro che gestisce le scritture e le letture(basso indica la volonta di scrivere)
     per cambiare tra scrittura e lettura devo prima disattivare l' icap insieme al cambio di modalità e poi riattivarlo*/
@@ -72,7 +73,7 @@ module icap(
         else if (avvia_lettura) 
         begin
             state<=0;
-            icap_enable<=1;//disabilitato
+            icap_enable<=1;//disabilitato icap
             icap_write<=1;//lettura
             icap_data_o<=32'hffffffff;
             ready_o<=0;
@@ -81,7 +82,76 @@ module icap(
         end
         else if(avvio)
         begin
+            //per leggere da icap devo prima abilitarlo e poi abilitare la scrittura del bitstream
+            //con le operazioni che devono essere eseguite per il significato delle operazioni
+            // UG470 ogni volta che l' icap deve essere cambiato di stato (lettura/scrittura)
+            //bisogna essere disabilitato, effettuato il cambio di stato e successivamente riabilitato
+            //il nuovo stato dell' icap viene catturato quando l' icap viene riabilitato
             case(state)
+            5'b00000:
+            begin
+                icap_enable<=0;//abilitato
+                icap_write<=0;//scrittura
+                state<=state+1;
+                icap_data_o<=32'hffffffff;
+            end 
+            5'b00001:
+            begin
+                //icap_enable<=0;//abilitato
+                //icap_write<=0;//scrittura
+                state<=state+1;
+                icap_data_o<=32'haa995566;
+            end
+            5'b00010: 
+            begin
+                state<=state+1;
+                icap_data_o<=32'h20000000;
+            end
+            5'b00011: 
+            begin
+                state<=state+1;
+                icap_data_o<=32'h30008001;
+            end
+            5'b00100: 
+            begin
+                state<=state+1;
+                icap_data_o<=32'h00000008;
+            end
+            5'b00101: 
+            begin
+               
+                if (i<=464)
+                begin
+                    i<=i+1;
+                    icap_data_o<=dati[14911-i*32-:32];
+                end
+                else
+                begin 
+                     state<=state+1;
+                     icap_data_o<=dati[31:0];
+                end
+                
+            end
+            5'b00110: 
+            begin
+                state<=state+1;
+                icap_data_o<=32'h30008001;
+            end
+            5'b00111: 
+            begin
+                state<=state+1;
+                icap_data_o<=32'h00000003;
+            end
+            
+            default : 
+            begin
+                state<=30;
+                avvio<=0;
+                 icap_enable<=1;//disabilitato icap
+                 icap_write<=1;//lettura
+            end
+        endcase
+            /*case(state) macchina per lettura del frame
                 5'b00001:
                 begin
                     icap_enable<=0;//abilitato
@@ -230,7 +300,7 @@ module icap(
                     state<=30;
                     avvio<=0;
                 end
-            endcase
+            endcase*/
         end
     end
     
@@ -244,38 +314,38 @@ ila_0 ILA_inst (
     .probe5(icap_write), // input [0 : 0] PROBE5
     .probe6(icap_enable), // input [0 : 0] PROBE6
     .probe7(avvia_lettura),
-    .probe8(icap_data_i[0]),
-    .probe9(icap_data_i[1]),
-    .probe10(icap_data_i[2]),
-    .probe11(icap_data_i[3]),
-    .probe12(icap_data_i[4]),
-    .probe13(icap_data_i[5]),
-    .probe14(icap_data_i[6]),
-    .probe15(icap_data_i[7]),
-    .probe16(icap_data_i[8]),
-    .probe17(icap_data_i[9]),
-    .probe18(icap_data_i[10]),
-    .probe19(icap_data_i[11]),
-    .probe20(icap_data_i[12]),
-    .probe21(icap_data_i[13]),
-    .probe22(icap_data_i[14]),
-    .probe23(icap_data_i[15]),
-    .probe24(icap_data_i[16]),
-    .probe25(icap_data_i[17]),
-    .probe26(icap_data_i[18]),
-    .probe27(icap_data_i[19]),
-    .probe28(icap_data_i[20]),
-    .probe29(icap_data_i[21]),
-    .probe30(icap_data_i[22]),
-    .probe31(icap_data_i[23]),
-    .probe32(icap_data_i[24]),
-    .probe33(icap_data_i[25]),
-    .probe34(icap_data_i[26]),
-    .probe35(icap_data_i[27]),
-    .probe36(icap_data_i[28]),
-    .probe37(icap_data_i[29]),
-    .probe38(icap_data_i[30]),
-    .probe39(icap_data_i[31]),
+    .probe8(icap_data_o[0]),
+    .probe9(icap_data_o[1]),
+    .probe10(icap_data_o[2]),
+    .probe11(icap_data_o[3]),
+    .probe12(icap_data_o[4]),
+    .probe13(icap_data_o[5]),
+    .probe14(icap_data_o[6]),
+    .probe15(icap_data_o[7]),
+    .probe16(icap_data_o[8]),
+    .probe17(icap_data_o[9]),
+    .probe18(icap_data_o[10]),
+    .probe19(icap_data_o[11]),
+    .probe20(icap_data_o[12]),
+    .probe21(icap_data_o[13]),
+    .probe22(icap_data_o[14]),
+    .probe23(icap_data_o[15]),
+    .probe24(icap_data_o[16]),
+    .probe25(icap_data_o[17]),
+    .probe26(icap_data_o[18]),
+    .probe27(icap_data_o[19]),
+    .probe28(icap_data_o[20]),
+    .probe29(icap_data_o[21]),
+    .probe30(icap_data_o[22]),
+    .probe31(icap_data_o[23]),
+    .probe32(icap_data_o[24]),
+    .probe33(icap_data_o[25]),
+    .probe34(icap_data_o[26]),
+    .probe35(icap_data_o[27]),
+    .probe36(icap_data_o[28]),
+    .probe37(icap_data_o[29]),
+    .probe38(icap_data_o[30]),
+    .probe39(icap_data_o[31]),
     .probe40(clk_i)
  );
 endmodule

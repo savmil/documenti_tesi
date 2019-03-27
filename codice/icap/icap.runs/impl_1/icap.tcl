@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -78,10 +77,8 @@ set rc [catch {
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet /home/saverio/icap/icap.runs/synth_1/icap.dcp
   read_ip -quiet /home/saverio/icap/icap.srcs/sources_1/ip/ila_0/ila_0.xci
-  add_files -quiet /home/saverio/icap/icap.runs/icap_template_synth_1/icap_template.dcp
-  set_property netlist_only true [get_files /home/saverio/icap/icap.runs/icap_template_synth_1/icap_template.dcp]
+  read_xdc -mode out_of_context /home/saverio/icap/icap.srcs/icap_template/new/icap_template_ooc.xdc
   read_xdc /home/saverio/icap/icap.srcs/constrs_1/new/nexys_ddr_4.xdc
-  read_xdc -mode out_of_context -ref icap_template /home/saverio/icap/icap.srcs/icap_template/new/icap_template_ooc.xdc
   link_design -top icap -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

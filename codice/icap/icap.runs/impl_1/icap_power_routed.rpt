@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Thu Mar 21 17:17:12 2019
+| Date             : Wed Mar 27 17:58:22 2019
 | Host             : saverio-UX530UX running 64-bit Ubuntu 16.04.6 LTS
 | Command          : report_power -file icap_power_routed.rpt -pb icap_power_summary_routed.pb -rpx icap_power_routed.rpx
 | Design           : icap
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        4 |       --- |             --- |
-| Slice Logic              |    <0.001 |     8145 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     2418 |     63400 |            3.81 |
-|   Register               |    <0.001 |     3942 |    126800 |            3.11 |
+| Slice Logic              |    <0.001 |     8257 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     2511 |     63400 |            3.96 |
+|   Register               |    <0.001 |     3943 |    126800 |            3.11 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     19000 |            0.13 |
 |   CARRY4                 |    <0.001 |      130 |     15850 |            0.82 |
 |   LUT as Shift Register  |    <0.001 |      301 |     19000 |            1.58 |
 |   F7/F8 Muxes            |    <0.001 |      134 |     63400 |            0.21 |
 |   Others                 |     0.000 |      679 |       --- |             --- |
-| Signals                  |    <0.001 |     5649 |       --- |             --- |
+| Signals                  |    <0.001 |     5714 |       --- |             --- |
 | Block RAM                |    <0.001 |       19 |       135 |           14.07 |
 | I/O                      |    <0.001 |       11 |       210 |            5.24 |
 | Static Power             |     0.098 |          |           |                 |

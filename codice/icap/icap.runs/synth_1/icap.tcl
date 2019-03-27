@@ -19,7 +19,6 @@ proc create_report { reportName command } {
 }
 set_param xicom.use_bs_reader 1
 set_param tcl.collectionResultDisplayLimit 0
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -33,11 +32,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo /home/saverio/icap/icap.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files -quiet /home/saverio/icap/icap.runs/icap_template_synth_1/icap_template.dcp
-set_property used_in_implementation false [get_files /home/saverio/icap/icap.runs/icap_template_synth_1/icap_template.dcp]
 read_verilog -library xil_defaultlib -sv {
   /home/saverio/icap/icap.srcs/sources_1/new/debouncer.sv
   /home/saverio/icap/icap.srcs/sources_1/new/flip_flop_d.v
+  /home/saverio/icap/icap.srcs/sources_1/new/icap_template.sv
   /home/saverio/icap/icap.srcs/sources_1/new/icap.sv
 }
 read_ip -quiet /home/saverio/icap/icap.srcs/sources_1/ip/ila_0/ila_0.xci
@@ -54,6 +52,9 @@ set_property used_in_implementation false [get_files -all /home/saverio/icap/ica
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc -mode out_of_context /home/saverio/icap/icap.srcs/icap_template/new/icap_template_ooc.xdc
+set_property used_in_implementation false [get_files /home/saverio/icap/icap.srcs/icap_template/new/icap_template_ooc.xdc]
+
 read_xdc /home/saverio/icap/icap.srcs/constrs_1/new/nexys_ddr_4.xdc
 set_property used_in_implementation false [get_files /home/saverio/icap/icap.srcs/constrs_1/new/nexys_ddr_4.xdc]
 

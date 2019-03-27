@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Thu Mar 21 17:16:34 2019
+| Date         : Wed Mar 27 17:57:44 2019
 | Host         : saverio-UX530UX running 64-bit Ubuntu 16.04.6 LTS
 | Command      : report_utilization -file icap_utilization_placed.rpt -pb icap_utilization_placed.pb
 | Design       : icap
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs                 | 2743 |     0 |     63400 |  4.33 |
-|   LUT as Logic             | 2418 |     0 |     63400 |  3.81 |
+| Slice LUTs                 | 2836 |     0 |     63400 |  4.47 |
+|   LUT as Logic             | 2511 |     0 |     63400 |  3.96 |
 |   LUT as Memory            |  325 |     0 |     19000 |  1.71 |
 |     LUT as Distributed RAM |   24 |     0 |           |       |
 |     LUT as Shift Register  |  301 |     0 |           |       |
-| Slice Registers            | 3942 |     0 |    126800 |  3.11 |
-|   Register as Flip Flop    | 3942 |     0 |    126800 |  3.11 |
+| Slice Registers            | 3943 |     0 |    126800 |  3.11 |
+|   Register as Flip Flop    | 3943 |     0 |    126800 |  3.11 |
 |   Register as Latch        |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                   |  102 |     0 |     31700 |  0.32 |
 | F8 Muxes                   |   32 |     0 |     15850 |  0.20 |
@@ -59,7 +59,7 @@ Table of Contents
 | 40    |          Yes |           - |          Set |
 | 171   |          Yes |           - |        Reset |
 | 52    |          Yes |         Set |            - |
-| 3679  |          Yes |       Reset |            - |
+| 3680  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,13 +69,13 @@ Table of Contents
 +-------------------------------------------+------+-------+-----------+-------+
 |                 Site Type                 | Used | Fixed | Available | Util% |
 +-------------------------------------------+------+-------+-----------+-------+
-| Slice                                     | 1494 |     0 |     15850 |  9.43 |
-|   SLICEL                                  |  996 |     0 |           |       |
-|   SLICEM                                  |  498 |     0 |           |       |
-| LUT as Logic                              | 2418 |     0 |     63400 |  3.81 |
+| Slice                                     | 1464 |     0 |     15850 |  9.24 |
+|   SLICEL                                  |  955 |     0 |           |       |
+|   SLICEM                                  |  509 |     0 |           |       |
+| LUT as Logic                              | 2511 |     0 |     63400 |  3.96 |
 |   using O5 output only                    |    0 |       |           |       |
-|   using O6 output only                    | 2157 |       |           |       |
-|   using O5 and O6                         |  261 |       |           |       |
+|   using O6 output only                    | 2232 |       |           |       |
+|   using O5 and O6                         |  279 |       |           |       |
 | LUT as Memory                             |  325 |     0 |     19000 |  1.71 |
 |   LUT as Distributed RAM                  |   24 |     0 |           |       |
 |     using O5 output only                  |    0 |       |           |       |
@@ -85,10 +85,10 @@ Table of Contents
 |     using O5 output only                  |    3 |       |           |       |
 |     using O6 output only                  |   66 |       |           |       |
 |     using O5 and O6                       |  232 |       |           |       |
-| LUT Flip Flop Pairs                       | 1695 |     0 |     63400 |  2.67 |
-|   fully used LUT-FF pairs                 |  108 |       |           |       |
-|   LUT-FF pairs with one unused LUT output | 1476 |       |           |       |
-|   LUT-FF pairs with one unused Flip Flop  | 1431 |       |           |       |
+| LUT Flip Flop Pairs                       | 1718 |     0 |     63400 |  2.71 |
+|   fully used LUT-FF pairs                 |  103 |       |           |       |
+|   LUT-FF pairs with one unused LUT output | 1513 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  | 1403 |       |           |       |
 | Unique Control Sets                       |  199 |       |           |       |
 +-------------------------------------------+------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.
@@ -182,14 +182,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 3679 |        Flop & Latch |
-| LUT6     | 1311 |                 LUT |
-| LUT4     |  541 |                 LUT |
-| LUT3     |  289 |                 LUT |
-| LUT5     |  281 |                 LUT |
+| FDRE     | 3680 |        Flop & Latch |
+| LUT6     | 1393 |                 LUT |
+| LUT4     |  556 |                 LUT |
+| LUT3     |  299 |                 LUT |
 | SRLC32E  |  274 |  Distributed Memory |
+| LUT5     |  272 |                 LUT |
 | SRL16E   |  257 |  Distributed Memory |
-| LUT2     |  181 |                 LUT |
+| LUT2     |  194 |                 LUT |
 | FDCE     |  171 |        Flop & Latch |
 | CARRY4   |  130 |          CarryLogic |
 | MUXF7    |  102 |               MuxFx |
@@ -220,12 +220,11 @@ Table of Contents
 10. Instantiated Netlists
 -------------------------
 
-+---------------+------+
-|    Ref Name   | Used |
-+---------------+------+
-| ila_0         |    1 |
-| icap_template |    1 |
-| dbg_hub       |    1 |
-+---------------+------+
++----------+------+
+| Ref Name | Used |
++----------+------+
+| ila_0    |    1 |
+| dbg_hub  |    1 |
++----------+------+
 
 

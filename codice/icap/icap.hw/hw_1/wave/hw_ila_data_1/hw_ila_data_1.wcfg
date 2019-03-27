@@ -10,14 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="941fs"></ZoomEndTime>
-      <Cursor1Time time="178000fs"></Cursor1Time>
+      <ZoomEndTime time="9481fs"></ZoomEndTime>
+      <Cursor1Time time="2000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="203"></NameColumnWidth>
-      <ValueColumnWidth column_width="178"></ValueColumnWidth>
+      <NameColumnWidth column_width="127"></NameColumnWidth>
+      <ValueColumnWidth column_width="101"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="4" />
+   <WVObjectSize size="6" />
    <wvobject type="logic" fp_name="avvia_lettura">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">avvia_lettura</obj_property>
@@ -42,7 +42,7 @@
          <obj_property name="DisplayName">FullPathName</obj_property>
          <obj_property name="ElementShortName">state_OBUF_3[3:3]</obj_property>
          <obj_property name="ObjectShortName">state_OBUF_3[3:3]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
@@ -79,268 +79,280 @@
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject type="vbus" fp_name="VirtualBus">
-      <obj_property name="label">dati</obj_property>
+      <obj_property name="label">datidascrivere</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="Reversed">false</obj_property>
+      <obj_property name="Reversed">true</obj_property>
       <obj_property name="ElementShortName">VirtualBus[]</obj_property>
       <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="array" fp_name="icap_data_i_1">
+      <wvobject type="array" fp_name="icap_data_o_1">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_1[0:0]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_1[0:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_1[0:0]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_1[0:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_2">
+      <wvobject type="array" fp_name="icap_data_o_2">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_2[1:1]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_2[1:1]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_2[1:1]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_2[1:1]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_3">
+      <wvobject type="array" fp_name="icap_data_o_3">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_3[2:2]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_3[2:2]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_3[2:2]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_3[2:2]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_4">
+      <wvobject type="array" fp_name="icap_data_o_4">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_4[3:3]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_4[3:3]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_4[3:3]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_4[3:3]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_5">
+      <wvobject type="array" fp_name="icap_data_o_5">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_5[4:4]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_5[4:4]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_5[4:4]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_5[4:4]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_6">
+      <wvobject type="array" fp_name="icap_data_o_6">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_6[5:5]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_6[5:5]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_6[5:5]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_6[5:5]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_7">
+      <wvobject type="array" fp_name="icap_data_o_7">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_7[6:6]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_7[6:6]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_7[6:6]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_7[6:6]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_8">
+      <wvobject type="array" fp_name="icap_data_o_8">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_8[7:7]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_8[7:7]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_8[7:7]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_8[7:7]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_9">
+      <wvobject type="array" fp_name="icap_data_o_9">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_9[8:8]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_9[8:8]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_9[8:8]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_9[8:8]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_10">
+      <wvobject type="array" fp_name="icap_data_o_10">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_10[9:9]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_10[9:9]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_10[9:9]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_10[9:9]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_11">
+      <wvobject type="array" fp_name="icap_data_o_11">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_11[10:10]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_11[10:10]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_11[10:10]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_11[10:10]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_12">
+      <wvobject type="array" fp_name="icap_data_o_12">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_12[11:11]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_12[11:11]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_12[11:11]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_12[11:11]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_13">
+      <wvobject type="array" fp_name="icap_data_o_13">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_13[12:12]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_13[12:12]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_13[12:12]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_13[12:12]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_14">
+      <wvobject type="array" fp_name="icap_data_o_14">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_14[13:13]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_14[13:13]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_14[13:13]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_14[13:13]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_15">
+      <wvobject type="array" fp_name="icap_data_o_15">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_15[14:14]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_15[14:14]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_15[14:14]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_15[14:14]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_16">
+      <wvobject type="array" fp_name="icap_data_o_16">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_16[15:15]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_16[15:15]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_16[15:15]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_16[15:15]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_17">
+      <wvobject type="array" fp_name="icap_data_o_17">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_17[16:16]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_17[16:16]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_17[16:16]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_17[16:16]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_18">
+      <wvobject type="array" fp_name="icap_data_o_18">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_18[17:17]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_18[17:17]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_18[17:17]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_18[17:17]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_19">
+      <wvobject type="array" fp_name="icap_data_o_19">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_19[18:18]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_19[18:18]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_19[18:18]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_19[18:18]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_20">
+      <wvobject type="array" fp_name="icap_data_o_20">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_20[19:19]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_20[19:19]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_20[19:19]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_20[19:19]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_21">
+      <wvobject type="array" fp_name="icap_data_o_21">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_21[20:20]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_21[20:20]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_21[20:20]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_21[20:20]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_22">
+      <wvobject type="array" fp_name="icap_data_o_22">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_22[21:21]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_22[21:21]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_22[21:21]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_22[21:21]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_23">
+      <wvobject type="array" fp_name="icap_data_o_23">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_23[22:22]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_23[22:22]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_23[22:22]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_23[22:22]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_24">
+      <wvobject type="array" fp_name="icap_data_o_24">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_24[23:23]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_24[23:23]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_24[23:23]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_24[23:23]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_25">
+      <wvobject type="array" fp_name="icap_data_o_25">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_25[24:24]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_25[24:24]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_25[24:24]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_25[24:24]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_26">
+      <wvobject type="array" fp_name="icap_data_o_26">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_26[25:25]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_26[25:25]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_26[25:25]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_26[25:25]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_27">
+      <wvobject type="array" fp_name="icap_data_o_27">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_27[26:26]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_27[26:26]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_27[26:26]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_27[26:26]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_28">
+      <wvobject type="array" fp_name="icap_data_o_28">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_28[27:27]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_28[27:27]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_28[27:27]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_28[27:27]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_29">
+      <wvobject type="array" fp_name="icap_data_o_29">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_29[28:28]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_29[28:28]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_29[28:28]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_29[28:28]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_30">
+      <wvobject type="array" fp_name="icap_data_o_30">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_30[29:29]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_30[29:29]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_30[29:29]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_30[29:29]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i_31">
+      <wvobject type="array" fp_name="icap_data_o_31">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i_31[30:30]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i_31[30:30]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o_31[30:30]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o_31[30:30]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="icap_data_i">
+      <wvobject type="array" fp_name="icap_data_o">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">icap_data_i[31:31]</obj_property>
-         <obj_property name="ObjectShortName">icap_data_i[31:31]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="ElementShortName">icap_data_o[31:31]</obj_property>
+         <obj_property name="ObjectShortName">icap_data_o[31:31]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap_enable">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap_enable</obj_property>
+      <obj_property name="ObjectShortName">icap_enable</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap_write">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap_write</obj_property>
+      <obj_property name="ObjectShortName">icap_write</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
 </wave_config>
