@@ -1,4 +1,0 @@
-Running: xsim.dir/Icap_read_sim_behav/xsimk -simmode gui -wdb Icap_read_sim_behav.wdb -simrunnum 0 -socket 46965
-Design successfully loaded
-Design Loading Memory Usage: 43004 KB (Peak: 43004 KB)
-Design Loading CPU Usage: 30 ms
