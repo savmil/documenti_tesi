@@ -2,12 +2,12 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Mar 25 16:29:27 2019
-# Process ID: 5236
+# Start of session at: Mon Apr  1 20:57:27 2019
+# Process ID: 18809
 # Current directory: /home/saverio/scrittura_su_flash/scrittura_su_flash.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /home/saverio/scrittura_su_flash/scrittura_su_flash.sim/sim_1/behav/xsim/xsim.dir/prova_scrittura_flash_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/saverio/scrittura_su_flash/scrittura_su_flash.sim/sim_1/behav/xsim/xsim.dir/testbench_scrittura_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/saverio/scrittura_su_flash/scrittura_su_flash.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/saverio/scrittura_su_flash/scrittura_su_flash.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /home/saverio/scrittura_su_flash/scrittura_su_flash.sim/sim_1/behav/xsim/xsim.dir/prova_scrittura_flash_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Mon Mar 25 16:29:28 2019...
+source /home/saverio/scrittura_su_flash/scrittura_su_flash.sim/sim_1/behav/xsim/xsim.dir/testbench_scrittura_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr  1 20:57:28 2019...

@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log scrittura_su_flash.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source scrittura_su_flash.tcl
+EAStep vivado -log controllore_flash.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source controllore_flash.tcl

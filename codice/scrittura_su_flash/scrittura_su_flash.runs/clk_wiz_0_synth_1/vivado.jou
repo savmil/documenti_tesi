@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Mar 25 16:05:09 2019
-# Process ID: 25428
+# Start of session at: Mon Apr  1 16:02:18 2019
+# Process ID: 15052
 # Current directory: /home/saverio/scrittura_su_flash/scrittura_su_flash.runs/clk_wiz_0_synth_1
 # Command line: vivado -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
 # Log file: /home/saverio/scrittura_su_flash/scrittura_su_flash.runs/clk_wiz_0_synth_1/clk_wiz_0.vds

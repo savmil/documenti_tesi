@@ -75,7 +75,7 @@ create_clock -period 10.000 -name synth_clk -waveform {0.000 5.000} -add [get_po
 ##Buttons
 
 
-set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports rst]
+set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports reset]
 set_property -dict {PACKAGE_PIN M18 IOSTANDARD LVCMOS33} [get_ports start]
 #set_property -dict { PACKAGE_PIN P17   IOSTANDARD LVCMOS33 } [get_ports { BTNL }]; #IO_L12P_T1_MRCC_14 Sch=btnl
 #set_property -dict { PACKAGE_PIN M17   IOSTANDARD LVCMOS33 } [get_ports { BTNR }]; #IO_L10N_T1_D15_14 Sch=btnr

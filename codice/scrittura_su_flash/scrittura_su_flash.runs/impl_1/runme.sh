@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log scrittura_su_flash.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source scrittura_su_flash.tcl -notrace
+EAStep vivado -log controllore_flash.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source controllore_flash.tcl -notrace
 
 

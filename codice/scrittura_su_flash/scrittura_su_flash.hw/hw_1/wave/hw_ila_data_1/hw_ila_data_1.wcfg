@@ -9,208 +9,93 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1011909fs"></ZoomStartTime>
-      <ZoomEndTime time="1048460fs"></ZoomEndTime>
-      <Cursor1Time time="1024000fs"></Cursor1Time>
+      <ZoomStartTime time="26922833fs"></ZoomStartTime>
+      <ZoomEndTime time="27020234fs"></ZoomEndTime>
+      <Cursor1Time time="27004000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="226"></NameColumnWidth>
-      <ValueColumnWidth column_width="160"></ValueColumnWidth>
+      <NameColumnWidth column_width="142"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="11" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="logic" fp_name="cs_n_OBUF">
+   <wvobject type="logic" fp_name="driver/quad_spi_line_i">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">cs_n_OBUF</obj_property>
-      <obj_property name="ObjectShortName">cs_n_OBUF</obj_property>
+      <obj_property name="ElementShortName">driver/quad_spi_line_i</obj_property>
+      <obj_property name="ObjectShortName">quad_spi_line_i</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="p_0_out">
+   <wvobject type="logic" fp_name="driver/p_0_out">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">p_0_out</obj_property>
+      <obj_property name="ElementShortName">driver/p_0_out</obj_property>
       <obj_property name="ObjectShortName">p_0_out</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="quad_spi_line_o_IBUF">
+   <wvobject type="logic" fp_name="driver/quad_spi_line_o">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">quad_spi_line_o_IBUF</obj_property>
-      <obj_property name="ObjectShortName">quad_spi_line_o_IBUF</obj_property>
+      <obj_property name="ElementShortName">driver/quad_spi_line_o</obj_property>
+      <obj_property name="ObjectShortName">quad_spi_line_o</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="quad_spi_line_i_OBUF">
+   <wvobject type="logic" fp_name="driver/p_0_out">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">quad_spi_line_i_OBUF</obj_property>
-      <obj_property name="ObjectShortName">quad_spi_line_i_OBUF</obj_property>
+      <obj_property name="ElementShortName">driver/p_0_out</obj_property>
+      <obj_property name="ObjectShortName">p_0_out</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="p_0_in">
+   <wvobject type="logic" fp_name="driver/done">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">p_0_in</obj_property>
-      <obj_property name="ObjectShortName">p_0_in</obj_property>
+      <obj_property name="ElementShortName">driver/done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="vbus" fp_name="VirtualBus">
-      <obj_property name="label">i</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Reversed">true</obj_property>
-      <obj_property name="ElementShortName">VirtualBus[]</obj_property>
-      <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
-      <wvobject type="array" fp_name="i_reg_n_0__1">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">i_reg_n_0__1[0:0]</obj_property>
-         <obj_property name="ObjectShortName">i_reg_n_0__1[0:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="i_reg_n_0__2">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">i_reg_n_0__2[1:1]</obj_property>
-         <obj_property name="ObjectShortName">i_reg_n_0__2[1:1]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="i_reg_n_0__3">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">i_reg_n_0__3[2:2]</obj_property>
-         <obj_property name="ObjectShortName">i_reg_n_0__3[2:2]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="i_reg_n_0__4">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">i_reg_n_0__4[3:3]</obj_property>
-         <obj_property name="ObjectShortName">i_reg_n_0__4[3:3]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="i_reg_n_0__5">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">i_reg_n_0__5[4:4]</obj_property>
-         <obj_property name="ObjectShortName">i_reg_n_0__5[4:4]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="i_reg_n_0_">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">i_reg_n_0_[5:5]</obj_property>
-         <obj_property name="ObjectShortName">i_reg_n_0_[5:5]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject type="vbus" fp_name="VirtualBus">
-      <obj_property name="label">stato</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Reversed">true</obj_property>
-      <obj_property name="ElementShortName">VirtualBus[]</obj_property>
-      <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <wvobject type="array" fp_name="state_reg_n_0_">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">state_reg_n_0_[0:0]</obj_property>
-         <obj_property name="ObjectShortName">state_reg_n_0_[0:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="state_reg_n_0__1">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">state_reg_n_0__1[1:1]</obj_property>
-         <obj_property name="ObjectShortName">state_reg_n_0__1[1:1]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="state_reg_n_0__2">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">state_reg_n_0__2[2:2]</obj_property>
-         <obj_property name="ObjectShortName">state_reg_n_0__2[2:2]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="state_reg_n_0__3">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">state_reg_n_0__3[3:3]</obj_property>
-         <obj_property name="ObjectShortName">state_reg_n_0__3[3:3]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="state_reg_n_0__5">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">state_reg_n_0__5[4:4]</obj_property>
-         <obj_property name="ObjectShortName">state_reg_n_0__5[4:4]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="state_reg_n_0__4">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">state_reg_n_0__4[5:5]</obj_property>
-         <obj_property name="ObjectShortName">state_reg_n_0__4[5:5]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject type="array" fp_name="dati_letti_reg_n_0__1">
+   <wvobject type="logic" fp_name="driver/avvio">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dati_letti_reg_n_0__1[1:1]</obj_property>
-      <obj_property name="ObjectShortName">dati_letti_reg_n_0__1[1:1]</obj_property>
+      <obj_property name="ElementShortName">driver/avvio</obj_property>
+      <obj_property name="ObjectShortName">avvio</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="driver/start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">driver/start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="driver/rst">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">driver/rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="driver/operation_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">driver/operation_1[0:0]</obj_property>
+      <obj_property name="ObjectShortName">operation_1[0:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="dati_letti_reg_n_0__2">
+   <wvobject type="array" fp_name="driver/operation">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dati_letti_reg_n_0__2[2:2]</obj_property>
-      <obj_property name="ObjectShortName">dati_letti_reg_n_0__2[2:2]</obj_property>
+      <obj_property name="ElementShortName">driver/operation[1:1]</obj_property>
+      <obj_property name="ObjectShortName">operation[1:1]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="dati_letti_reg_n_0__3">
+   <wvobject type="logic" fp_name="driver/started">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dati_letti_reg_n_0__3[3:3]</obj_property>
-      <obj_property name="ObjectShortName">dati_letti_reg_n_0__3[3:3]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="dati_letti_reg_n_0__4">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dati_letti_reg_n_0__4[4:4]</obj_property>
-      <obj_property name="ObjectShortName">dati_letti_reg_n_0__4[4:4]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="dati_letti_reg_n_0__5">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dati_letti_reg_n_0__5[5:5]</obj_property>
-      <obj_property name="ObjectShortName">dati_letti_reg_n_0__5[5:5]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="dati_letti_reg_n_0_">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dati_letti_reg_n_0_[6:6]</obj_property>
-      <obj_property name="ObjectShortName">dati_letti_reg_n_0_[6:6]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">driver/started</obj_property>
+      <obj_property name="ObjectShortName">started</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

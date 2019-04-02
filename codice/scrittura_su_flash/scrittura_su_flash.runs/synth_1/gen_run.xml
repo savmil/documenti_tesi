@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1553638749">
-  <File Type="VDS-TIMING-PB" Name="scrittura_su_flash_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="scrittura_su_flash_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="scrittura_su_flash.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="scrittura_su_flash_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="scrittura_su_flash_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="scrittura_su_flash_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="scrittura_su_flash.vds"/>
-  <File Type="REPORTS-TCL" Name="scrittura_su_flash_reports.tcl"/>
-  <File Type="PA-TCL" Name="scrittura_su_flash.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1554207863">
+  <File Type="VDS-TIMING-PB" Name="controllore_flash_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="controllore_flash_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="controllore_flash.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="controllore_flash_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="controllore_flash_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="controllore_flash_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="controllore_flash.vds"/>
+  <File Type="REPORTS-TCL" Name="controllore_flash_reports.tcl"/>
+  <File Type="PA-TCL" Name="controllore_flash.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/new/debouncer.sv">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../icap/icap.srcs/sources_1/new/debouncer.sv"/>
-        <Attr Name="ImportTime" Val="1553157931"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/scrittura_su_flash.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -27,17 +18,18 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/spi_master.sv">
+    <File Path="$PSRCDIR/sources_1/new/controllore_flash.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/tri_state.sv">
+    <File Path="$PSRCDIR/sources_1/imports/new/debouncer.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../icap/icap.srcs/sources_1/new/debouncer.sv"/>
+        <Attr Name="ImportTime" Val="1553157931"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -45,7 +37,8 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="scrittura_su_flash"/>
+      <Option Name="TopModule" Val="controllore_flash"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -64,9 +57,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>

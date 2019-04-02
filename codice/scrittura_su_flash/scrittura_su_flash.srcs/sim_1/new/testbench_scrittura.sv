@@ -26,23 +26,23 @@ module testbench_scrittura(
     reg clk;
     reg rst;
     reg start;
-    wire quad_spi_line;
+    wire quad_spi_line_i;
+     wire quad_spi_line_o;
     wire cs_n;
-    scrittura_su_flash(clk,rst,start,quad_spi_line,cs_n );
+
+    controllore_flash flash(clk,start,quad_spi_line_o,quad_spi_line_i,cs_n) ;
     initial 
     begin
     rst<=0;
     start<=0;
+    clk<=0;
+    #10 rst<=1;
+    #10 rst<=0; start<=1;
+    #40 start<=0;
     end
     always
     begin
     #10 clk = ~clk;
     end
-    always @(posedge clk)
-    begin
-    #10 rst<=1;
-    #10 rst<=1; start<=1;
-    #10 start<=0;
-    
-    end
+
 endmodule

@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log scrittura_su_flash.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source scrittura_su_flash.tcl -notrace" );
+         "-log controllore_flash.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source controllore_flash.tcl -notrace" );
 
 
 
