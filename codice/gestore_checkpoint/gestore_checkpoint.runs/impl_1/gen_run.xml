@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1556474654">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="gestore_checkpoint.drc"/>
+  <File Type="BG-BGN" Name="gestore_checkpoint.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="gestore_checkpoint.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="gestore_checkpoint.ltx"/>
+  <File Type="BITSTR-MMI" Name="gestore_checkpoint.mmi"/>
+  <File Type="BITSTR-BMM" Name="gestore_checkpoint_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="gestore_checkpoint.nky"/>
+  <File Type="BITSTR-RBT" Name="gestore_checkpoint.rbt"/>
+  <File Type="BITSTR-MSK" Name="gestore_checkpoint.msk"/>
+  <File Type="BG-BIN" Name="gestore_checkpoint.bin"/>
+  <File Type="BG-BIT" Name="gestore_checkpoint.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="gestore_checkpoint_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="gestore_checkpoint_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="gestore_checkpoint_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="gestore_checkpoint.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="gestore_checkpoint_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="gestore_checkpoint_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="gestore_checkpoint_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="gestore_checkpoint_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="gestore_checkpoint_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="gestore_checkpoint_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="gestore_checkpoint_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="gestore_checkpoint_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="gestore_checkpoint_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="gestore_checkpoint_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="gestore_checkpoint_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="gestore_checkpoint_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="gestore_checkpoint_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="gestore_checkpoint_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="gestore_checkpoint_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="gestore_checkpoint_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="gestore_checkpoint_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="gestore_checkpoint_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="gestore_checkpoint_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="gestore_checkpoint_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="gestore_checkpoint_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="gestore_checkpoint_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="gestore_checkpoint_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="gestore_checkpoint_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="gestore_checkpoint_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="gestore_checkpoint_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="gestore_checkpoint_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="gestore_checkpoint_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="gestore_checkpoint_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="gestore_checkpoint_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="gestore_checkpoint_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="gestore_checkpoint_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="gestore_checkpoint_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="gestore_checkpoint_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="gestore_checkpoint_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="gestore_checkpoint_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="gestore_checkpoint_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="gestore_checkpoint_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="gestore_checkpoint_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="gestore_checkpoint_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="gestore_checkpoint_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="gestore_checkpoint_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="gestore_checkpoint_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="gestore_checkpoint.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="gestore_checkpoint_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="gestore_checkpoint_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="gestore_checkpoint_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="gestore_checkpoint_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="gestore_checkpoint_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="gestore_checkpoint_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="gestore_checkpoint_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="gestore_checkpoint.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/codice_tesi/bram_esempio/bram_esempio.srcs/sources_1/new/bram.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../bram_esempio/bram_esempio.srcs/sources_1/new/bram.sv"/>
+        <Attr Name="ImportTime" Val="1555848880"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/codice_tesi/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/controllore_flash.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/controllore_flash.sv"/>
+        <Attr Name="ImportTime" Val="1554795844"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/debouncer.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../icap/icap.srcs/sources_1/new/debouncer.sv"/>
+        <Attr Name="ImportTime" Val="1554304873"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/icap.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../icap/icap.srcs/sources_1/new/icap.sv"/>
+        <Attr Name="ImportTime" Val="1556023543"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/codice_tesi/icap/icap.srcs/sources_1/new/icap_template.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../icap/icap.srcs/sources_1/new/icap_template.sv"/>
+        <Attr Name="ImportTime" Val="1554304873"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/codice_tesi/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/scrittura_su_flash.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/scrittura_su_flash.sv"/>
+        <Attr Name="ImportTime" Val="1554794711"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/gestore_checkpoint.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/codice_tesi/bram_esempio/bram_esempio.srcs/sources_1/new/bram_top.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../bram_esempio/bram_esempio.srcs/sources_1/new/bram_top.sv"/>
+        <Attr Name="ImportTime" Val="1555849489"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/flip_flop_d.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../icap/icap.srcs/sources_1/new/flip_flop_d.v"/>
+        <Attr Name="ImportTime" Val="1554304873"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="gestore_checkpoint"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/constraint.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraint.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream">
+      <Option Id="LogicLocationFileBool">1</Option>
+      <Option Id="BinFile">1</Option>
+      <Option Id="ReadbackFileBool">1</Option>
+    </Step>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

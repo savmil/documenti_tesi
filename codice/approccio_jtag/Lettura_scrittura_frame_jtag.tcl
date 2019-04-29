@@ -475,6 +475,7 @@ proc crea_pacchetto_scrittura {} {
   append sTmp [conv2hex 32 $sTmp2]
   #AHIGH
   append sTmp 00000008
+
   set file [open /home/saverio/Scrivania/tesi/gaffe-xilinx-master/bitstream_ascii.bit]
   set input [read $file]
   set lines [split $input "\n"]
@@ -482,6 +483,7 @@ proc crea_pacchetto_scrittura {} {
   set strip [string range $stripped 0 end-2] 
   set hex $strip
   append sTmp $strip
+
   #puts $strip
   set    sTmp2 $DEF_TYPE_1
   append sTmp2 $DEF_WRITE 

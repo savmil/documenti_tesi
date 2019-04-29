@@ -1,0 +1,10 @@
+updatemem -debug -meminfo /home/saverio/Scrivania/tesi/script/bram/mem.mmi -data /home/saverio/Scrivania/tesi/script/bram/m.mem -proc dummy -bit /home/saverio/Scrivania/codice_tesi/bram_esempio/bram_esempio.runs/impl_1/bram_top.bit -out /home/saverio/bram.bit -force
+
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF
+FFFFFFFF
