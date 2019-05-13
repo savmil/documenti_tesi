@@ -1,0 +1,8 @@
+open_project "file.xpr"
+open_run "nome dell' implementazione" //es. impl_1
+//lsearch -regexp [ get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BMEM.*.* }] patter_da_cercare // restituisce posizione elemento  nell' array di stringhe che si ottiene dalla ricerca di tutte le bram che contiene quel pattern
+get_property LOC 
+
+get_property LOC [lindex [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BMEM.*.* }] [lsearch -regexp [ get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BMEM.*.* }] frame_da_salvare]]//permette di ottenere il ntipo della BRAM e la sua posizione
+
+string range $component [string first X $component] end //per avere il loc solamente senza BRAM
