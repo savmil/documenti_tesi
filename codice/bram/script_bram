@@ -1,5 +1,7 @@
 updatemem -debug -meminfo /home/saverio/Scrivania/tesi/script/bram/mem.mmi -data /home/saverio/Scrivania/tesi/script/bram/m.mem -proc dummy -bit /home/saverio/Scrivania/codice_tesi/bram_esempio/bram_esempio.runs/impl_1/bram_top.bit -out /home/saverio/bram.bit -force
 
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/bram_esempio/bram_esempio.runs/impl_1/bram_top.bit -o b /home/saverio/bram.bit
+
 FFFFFFFF
 FFFFFFFF
 FFFFFFFF
@@ -8,3 +10,8 @@ FFFFFFFF
 FFFFFFFF
 FFFFFFFF
 FFFFFFFF
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+
+write_cfgmem -format mcs -interface SPIX1 -size 16 -loadbit "up 0x00400000 /home/saverio/checkpoint.bit " /home/saverio/checkpoint.mcs -force 

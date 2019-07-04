@@ -1,0 +1,5 @@
+ADDRESS_SPACE v4_minor RAMB36 [0x00000000:0x000011FF]
+		BUS_BLOCK
+			icap/frame_da_salvare/BRAM_SINGLE_MACRO_inst/genblk3_0.bram36_single_bl.bram36_single_bl	[35:0] LOC = X0Y12;
+		END_BUS_BLOCK;
+END_ADDRESS_SPACE;

@@ -3,8 +3,8 @@
 	<Processor Endianness="Little" InstPath="dummy">
 	<AddressSpace Name="mybram" Begin="0" End="32768">
 		<BusBlock>
-			<BitLane MemType="RAMB36" Placement="X0Y16">
-				<DataWidth MSB="1023" LSB="0"/>
+			<BitLane MemType="RAMB36" Placement="X0Y18">
+				<DataWidth MSB="31" LSB="0"/>
 				<AddressRange Begin="0" End="32768"/>
 				<Parity ON="false" NumBits="0"/>
 			</BitLane>

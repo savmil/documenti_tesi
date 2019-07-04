@@ -76,6 +76,7 @@ set rc [catch {
   add_files -quiet /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/synth_1/gestore_checkpoint.dcp
   read_ip -quiet /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_0/ila_0.xci
+  read_ip -quiet /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_3/ila_3.xci
   read_xdc /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/constrs_1/new/constraint.xdc
   link_design -top gestore_checkpoint -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb

@@ -24,13 +24,15 @@ module controllore_flash(
 	input wire clk_i,
 	input wire start,
 	input wire reset,
-	input wire [511:0] data,
+	input wire [511:0] data_in,
+	output reg [511:0] data_out,
 	input wire [23:0] address,
 	input wire [1:0]operation,
 	output reg done,
 	//input wire quad_spi_line_o,
 	//output reg quad_spi_line_i,
 	//output reg cs_n
+	output reg [7:0] read_data,
 	input wire quad_spi_line_o, //MOSI
     output reg quad_spi_line_i,
     output reg cs_n
@@ -47,7 +49,7 @@ module controllore_flash(
 	reg i;
 	//reg [511:0] data;
 	//reg [23:0] address;
-	reg [7:0] read_data;
+	
 	//reg started;
 	/*ila_1 ila(
 				.clk(clk_i),
@@ -59,9 +61,11 @@ module controllore_flash(
 	//debouncer debounce1(.clk(clk),.PB(start),.PB_state(avvia_op));
 	//debouncer debounce2(.clk(clk),.PB(rst),.PB_state(reset));
 	//operazioni erase di un settore esadecimale 0, scrittura di 4kb esadecimale 1, lettura di una pagina esadecimale 2
-	scrittura_su_flash driver(.clk_i(clk_i),.rst(rst),.start(start_op),.operation(operation),.data(data),
+	scrittura_su_flash driver(.clk_i(clk_i),.rst(rst),.start(start_op),.operation(operation),.data_in(data_in),.data_out(data_out),
 	.address(address),.quad_spi_line_o(quad_spi_line_o),.quad_spi_line_i(quad_spi_line_i),
 	.read_data(read_data),.started(started),.done(done),.cs_n(cs_n));
+	//FSM che maschera le varie operazioni su flash, dice solamente quali operazioni fare ed avvia
+	//il driver della flash
 	initial 
 	begin
 		state<=3'b000;

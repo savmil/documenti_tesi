@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Apr 28 20:05:58 2019
-# Process ID: 4487
+# Start of session at: Wed Jul  3 17:01:00 2019
+# Process ID: 7224
 # Current directory: /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1
 # Command line: vivado -log gestore_checkpoint.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source gestore_checkpoint.tcl -notrace
 # Log file: /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.vdi

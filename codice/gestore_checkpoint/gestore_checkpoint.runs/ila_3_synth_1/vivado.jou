@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Jun 10 20:12:06 2019
+# Process ID: 26006
+# Current directory: /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/ila_3_synth_1
+# Command line: vivado -log ila_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ila_3.tcl
+# Log file: /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/ila_3_synth_1/ila_3.vds
+# Journal file: /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/ila_3_synth_1/vivado.jou
+#-----------------------------------------------------------
+source ila_3.tcl -notrace

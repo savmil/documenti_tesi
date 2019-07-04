@@ -23,10 +23,10 @@
 module bram(
 		input wire [9:0] ADDR,
 		input wire CLK,
-		output wire [31:0] DO,
+		output wire [35:0] DO,
 		input wire EN,
 		input wire REGCE,
-		input wire [31:0] DI,
+		input wire [35:0] DI,
 		input wire RST,
 		input wire [3:0] WE
 		//input wire A4,
@@ -76,8 +76,8 @@ module bram(
       .DO_REG(0), // Optional output register (0 or 1)
       .INIT(36'h000000000), // Initial values on output port
       .INIT_FILE ("NONE"),
-      .WRITE_WIDTH(32), // Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
-      .READ_WIDTH(32),  // Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
+      .WRITE_WIDTH(36), // Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
+      .READ_WIDTH(36),  // Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
       .SRVAL(36'h000000000), // Set/Reset value for port output
       .WRITE_MODE("WRITE_FIRST"), // "WRITE_FIRST", "READ_FIRST", or "NO_CHANGE" 
       .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000420f1f),

@@ -27,12 +27,15 @@ set_property webtalk.parent_dir /home/saverio/Scrivania/codice_tesi/gestore_chec
 set_property parent.project_path /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language VHDL [current_project]
+set_property target_language Verilog [current_project]
 set_property ip_output_repo /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+set_property generic prova=\"trovato\" [current_fileset]
 read_verilog -library xil_defaultlib -sv {
   /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/imports/codice_tesi/bram_esempio/bram_esempio.srcs/sources_1/new/bram.sv
+  /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/new/comparator.sv
   /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/imports/codice_tesi/scrittura_su_flash/scrittura_su_flash.srcs/sources_1/new/controllore_flash.sv
+  /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/new/counter_reg.sv
   /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/imports/new/debouncer.sv
   /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/imports/new/icap.sv
   /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/imports/codice_tesi/icap/icap.srcs/sources_1/new/icap_template.sv
@@ -49,6 +52,12 @@ set_property used_in_synthesis false [get_files -all /home/saverio/Scrivania/cod
 set_property used_in_implementation false [get_files -all /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc]
+
+read_ip -quiet /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_3/ila_3.xci
+set_property used_in_synthesis false [get_files -all /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_3/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_3/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_3/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/ila_3/ila_3_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

@@ -31,7 +31,7 @@ set_property webtalk.parent_dir /home/saverio/Scrivania/codice_tesi/gestore_chec
 set_property parent.project_path /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language VHDL [current_project]
+set_property target_language Verilog [current_project]
 set_property ip_output_repo /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci

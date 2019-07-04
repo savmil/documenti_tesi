@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue May 21 20:12:01 2019
+# Process ID: 11786
+# Current directory: /home/saverio/Scrivania/tesi/script/bram
+# Command line: vivado -mode tcl
+# Log file: /home/saverio/Scrivania/tesi/script/bram/vivado.log
+# Journal file: /home/saverio/Scrivania/tesi/script/bram/vivado.jou
+#-----------------------------------------------------------
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+source /home/saverio/Scrivania/tesi/script/trovare_indirizzi_in_ll.tcl 
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll 
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
+search_for_frame /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.ll
+data2mem -bm /home/saverio/Scrivania/tesi/script/bram/bram.bmm -bd /home/saverio/Scrivania/tesi/script/bram/test.mem -bt /home/saverio/Scrivania/codice_tesi/gestore_checkpoint/gestore_checkpoint.runs/impl_1/gestore_checkpoint.bit -o b /home/saverio/checkpoint.bit
