@@ -31,16 +31,16 @@ proc searchinfile {filename component &list_net &frame} {
 	set number_offset 0
 	while {[gets $file line] != -1} {
 		#pulisco il frame per evitare di avere copie multiple
-		set frame ""
+		
 		#cerco stringhe che hanno il node del componente
 	    if {[regexp "$component" $line all value]} {
-	        
+	        set frame ""
 	        set line [string map {" " ""} $line]
 	        #puts $line
 	        set pos [string first 0x $line] 
 	        # prendo il frame
 	        append frame [string range $line $pos+2 $pos+9] 
-	        
+	        puts $frame
 	        
 	        set netpos [string first "Net=" $line] 
 	        #ottengo il valore Net= dal .ll
@@ -121,7 +121,7 @@ proc changebit {filename_source filename_dest list_offset_source list_offset_des
 			}
 		}
 	}
-	puts "informazioni da scambiare [array get da_scambiare_source] "
+	puts "informazioni da scambiare sorgente [array get da_scambiare_source] "
 	#creo una lista dei valori che devo scrivere nel file di destinazione con le loro posizioni
 	foreach  {key value}  [array get l_n_s] {
     	foreach  {key1 value1}  [array get l_n_d] {
@@ -132,7 +132,7 @@ proc changebit {filename_source filename_dest list_offset_source list_offset_des
     		}
     	}
 	}
-	puts "informazioni da scambiare [array get da_scambiare_dest] "
+	puts "informazioni da scambiare destinazione [array get da_scambiare_dest] "
 	set bit_number 0
 	set line_number 0
 	set frame_number 0
@@ -219,16 +219,16 @@ proc changebit {filename_source filename_dest list_offset_source list_offset_des
 		#puts $frame_da_scrivere
 		close $fileId
 }
-
+#viegono richiesti i due .ll dei diversi design
 proc swapbit {filename filename1} {
-	open_hw
-  	connect_hw_server
-    open_hw_target -jtag_mode true
+	#open_hw
+  	#connect_hw_server
+    #open_hw_target -jtag_mode true
     array set list_net_source {}
     array set list_net_dest {}
     set frame_source ""
     set frame_dest ""
-    source /home/saverio/Scrivania/tesi/script/Lettura_scrittura_frame_jtag.tcl
+    #source /home/saverio/Scrivania/tesi/script/Lettura_scrittura_frame_jtag.tcl
     # ottengo la lista degli offset dei bit del componente
 	array set list_offset_source_file [searchinfile $filename "c_r/" list_net_source frame_source]
 	array set list_offset_dest_file [searchinfile $filename1 "c_r/" list_net_dest frame_dest]
@@ -236,14 +236,14 @@ proc swapbit {filename filename1} {
 	set file_source /home/saverio/Scrivania/tesi/script/bit_registro.rdbk
 	#puts [array get list_net_source]
 	#leggo il frame dal dispositivo destinatario
-	leggi_frame $file_dest $frame_dest 2 1
+	#leggi_frame $file_source $frame_source 2 1
 	puts $frame_dest
 	puts $frame_source
-	puts "changebit $frame_dest"
+	puts "changebit $frame_source"
 	puts [array get list_net_source]
 	#mi permette di modificare i file da caricare
 	changebit $file_source $file_dest [array get list_offset_source_file] [array get list_offset_dest_file] [array get list_net_source] [array get list_net_dest] $frame_dest
-	scrivi_bitstream /home/saverio/Scrivania/tesi/script/bitstream_da_inviare.txt
-	close_hw
+	#scrivi_bitstream /home/saverio/Scrivania/tesi/script/bitstream_da_inviare.txt
+	#close_hw
 	
 }
