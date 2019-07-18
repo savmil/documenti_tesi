@@ -31,7 +31,8 @@ module comparator(
     begin
     	for (int i=0; i < 32; i++) 
     	begin
-    		if (first_operand[i]==1 & second_operand[i]==1)
+    		if (first_operand[i]==1 & second_operand[i]==1) // se il valore della maschera è uno ed il bit è pari ad uno questo viene messo a zero
+                                                            //cioè vediamo tutti i led accessi
     		begin
     			result[i]<=1'b0;
     		end

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Jul 11 12:12:23 2019
+# Process ID: 30687
+# Current directory: /home/saverio/Scrivania/codice_tesi/esempio_due_registri/esempio_un_registro.runs/impl_1
+# Command line: vivado -log top_module.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_module.tcl -notrace
+# Log file: /home/saverio/Scrivania/codice_tesi/esempio_due_registri/esempio_un_registro.runs/impl_1/top_module.vdi
+# Journal file: /home/saverio/Scrivania/codice_tesi/esempio_due_registri/esempio_un_registro.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source top_module.tcl -notrace

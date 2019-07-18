@@ -38,10 +38,10 @@ module icap(
     reg [4:0] state;
     reg [9:0] i;
     reg [4:0] j;//mi serve per contare il salto della bram
-    reg    [31:0]  icap_data_i;//dati letti dall' icap
-    reg     [31:0]  icap_data_o;//dati scritti utilizzando l' icap
-    reg     icap_enable; //abilita icap
-    reg     icap_write; //decide se l'icap viene usato in lettura o in scrittura
+    reg [31:0]  icap_data_i;//dati letti dall' icap
+    reg [31:0]  icap_data_o;//dati scritti utilizzando l' icap
+    reg icap_enable; //abilita icap
+    reg icap_write; //decide se l'icap viene usato in lettura o in scrittura
     reg [7:0] num_frame=8'b11001010;
     /*wire    avvia_lettura;
     wire    reset; utilizzati dai debouncer per debug del singolo componente*/
@@ -242,7 +242,7 @@ module icap(
                       begin
                         avvia_flash<=1'b1;
                         operazione_flash<=2'h2;//scrivo il frame
-                        address<=24'h000000+i*512;
+                        address<=24'h40*i;
                         flash<=1;
                       end
                       else if (flash && !ready) 
@@ -567,12 +567,17 @@ module icap(
                   scelta<=0;
 
                 end
-                else if( (i>=((num_frame/2)+4)) &&(i<(num_frame+4)) ) //il più 4 è un numero perchè ci mette più tempo di un frame per darmi idati
+                else if( (i>=((num_frame/2)+4)) &&(i<(num_frame+4)) ) //il più 4 è richiesto perchè ci mette più tempo di un colpo di clock per darmi i dati
                 begin
                   data[3231-((i-105)*32)-:32]<=risultato_and;
+                  // entro nell' if quando il contatore del salto è uguale al valore del salto
                   if(j[3:0]==buffer[3:0])
                   begin
-
+                  	// questa struttura mi serve per gestire il delay dell' accesso in bram, poiché una lettura di una word
+                  	// richiede due colpi di clock quindi utilizzo tre buffer precendetemente riempiti prima di leggere i
+                  	//dati dall' ICAP così facendo quando leggo una word dall' ICAP faccio partire un contatore che dopo
+                  	// due colpi di clock va ad aggiornare quel buffer leggendo il valore dalla BRAM, quando un buffer viene
+                  	// letto passo a quello successivo per avere la maschera che mi occorre a quel colpo di clock
                     if (scelta==0)
                     begin
                       buffer<=buffer1;                               
@@ -712,16 +717,18 @@ module icap(
                       flash<=1;
                     end
                     else if (flash && !ready) // mi serve per attendere che la FSM dell flash parta
-                                              //clock generato a 50 MHz non stabile
+                                              //clock generato a 50 MHz non stabile alcune volte
+                                          	  // l' oscillazione non è a 50 MHZ
                     begin
-                      if (!flash_pronta)
+                      if (!flash_pronta) //mi assicuro che la FSM della flash non stia facendo altro
                       begin
                         ready<=1;
                       end
                     end
                     else if (flash && ready) 
                     begin
-                      avvia_flash<=1'b0; 
+                      avvia_flash<=1'b0; // disabilito l' avvio altrimenti rimarrei bloccato nel primo stato
+                      					 // della
                       if (flash_pronta==1'b1)
                       begin
                        i<=i+1;
@@ -737,7 +744,7 @@ module icap(
                   begin
                     avvia_flash<=1'b1;
                       operazione_flash<=2'h1;//scrivo il frame
-                      address<=24'h200*(i-1);
+                      address<=24'h40*(i-1);
                       if (i==7)
                       begin
                         dati_da_salvare[511:352]<=data[159:0];

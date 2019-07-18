@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date             : Wed Jul  3 17:09:03 2019
+| Date             : Thu Jul 18 13:40:25 2019
 | Host             : saverio-UX530UX running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file gestore_checkpoint_power_routed.rpt -pb gestore_checkpoint_power_summary_routed.pb -rpx gestore_checkpoint_power_routed.rpx
 | Design           : gestore_checkpoint
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.324        |
+| Total On-Chip Power (W)  | 0.322        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.224        |
+| Dynamic (W)              | 0.223        |
 | Device Static (W)        | 0.100        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.5         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.055 |        7 |       --- |             --- |
+| Clocks                   |     0.053 |        7 |       --- |             --- |
 | Slice Logic              |     0.012 |    40939 |       --- |             --- |
-|   LUT as Logic           |     0.011 |    16296 |     63400 |           25.70 |
+|   LUT as Logic           |     0.011 |    16306 |     63400 |           25.72 |
 |   Register               |    <0.001 |    18249 |    126800 |           14.39 |
 |   LUT as Shift Register  |    <0.001 |     1603 |     19000 |            8.44 |
 |   CARRY4                 |    <0.001 |      278 |     15850 |            1.75 |
 |   F7/F8 Muxes            |    <0.001 |     1520 |     63400 |            2.40 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     19000 |            0.13 |
 |   Others                 |     0.000 |     1076 |       --- |             --- |
-| Signals                  |     0.020 |    29250 |       --- |             --- |
+| Signals                  |     0.020 |    29247 |       --- |             --- |
 | Block RAM                |     0.029 |       40 |       135 |           29.63 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
 | I/O                      |     0.003 |       20 |       210 |            9.52 |
 | Static Power             |     0.100 |          |           |                 |
-| Total                    |     0.324 |          |           |                 |
+| Total                    |     0.322 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.131 |       0.114 |      0.017 |
+| Vccint    |       1.000 |     0.129 |       0.112 |      0.017 |
 | Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -149,7 +149,7 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| gestore_checkpoint                                                                 |     0.224 |
+| gestore_checkpoint                                                                 |     0.223 |
 |   c_r                                                                              |    <0.001 |
 |   contatore                                                                        |    <0.001 |
 |   dbg_hub                                                                          |     0.002 |
@@ -240,10 +240,10 @@ Table of Contents
 |         SWITCH_N_EXT_BSCAN.bscan_switch                                            |    <0.001 |
 |   debounce1                                                                        |    <0.001 |
 |   debounce2                                                                        |    <0.001 |
-|   icap                                                                             |     0.216 |
-|     ILA_inst                                                                       |     0.019 |
-|       inst                                                                         |     0.019 |
-|         ila_core_inst                                                              |     0.019 |
+|   icap                                                                             |     0.214 |
+|     ILA_inst                                                                       |     0.018 |
+|       inst                                                                         |     0.018 |
+|         ila_core_inst                                                              |     0.018 |
 |           ila_trace_memory_inst                                                    |     0.006 |
 |             SUBCORE_RAM_BLK_MEM_1.trace_block_memory                               |     0.006 |
 |               inst_blk_mem_gen                                                     |     0.006 |
@@ -687,7 +687,7 @@ Table of Contents
 |                       u_srlB                                                       |    <0.001 |
 |                       u_srlC                                                       |    <0.001 |
 |                       u_srlD                                                       |    <0.001 |
-|           xsdb_memory_read_inst                                                    |     0.001 |
+|           xsdb_memory_read_inst                                                    |    <0.001 |
 |     comp                                                                           |    <0.001 |
 |     controllore_flash                                                              |     0.133 |
 |       driver                                                                       |     0.132 |
@@ -1208,9 +1208,9 @@ Table of Contents
 |     frame_da_salvare                                                               |     0.003 |
 |       BRAM_SINGLE_MACRO_inst                                                       |     0.003 |
 |     icap                                                                           |    <0.001 |
-|     ila_icap                                                                       |     0.023 |
-|       inst                                                                         |     0.023 |
-|         ila_core_inst                                                              |     0.023 |
+|     ila_icap                                                                       |     0.022 |
+|       inst                                                                         |     0.022 |
+|         ila_core_inst                                                              |     0.022 |
 |           ila_trace_memory_inst                                                    |     0.010 |
 |             SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory                          |     0.010 |
 |               inst_blk_mem_gen                                                     |     0.010 |

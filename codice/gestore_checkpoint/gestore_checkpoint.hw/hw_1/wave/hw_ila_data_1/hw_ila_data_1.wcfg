@@ -10,16 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1024001fs"></ZoomEndTime>
-      <Cursor1Time time="144000fs"></Cursor1Time>
+      <ZoomEndTime time="6641fs"></ZoomEndTime>
+      <Cursor1Time time="206000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="189"></NameColumnWidth>
-      <ValueColumnWidth column_width="68"></ValueColumnWidth>
+      <NameColumnWidth column_width="187"></NameColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
-   <wave_markers>
-   </wave_markers>
+   <WVObjectSize size="49" />
    <wvobject type="array" fp_name="icap/i_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">icap/i_1[9:0]</obj_property>
@@ -151,6 +149,230 @@
       <obj_property name="ElementShortName">icap/buffer[35:0]</obj_property>
       <obj_property name="ObjectShortName">buffer[35:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_12">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_12</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_12</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_13">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_13</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_13</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_14">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_14</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_14</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_15">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_15</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_15</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_16">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_16</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_16</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_17">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_17</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_17</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_18">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_18</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_18</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_19">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_19</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_19</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_20">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_20</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_20</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_21">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_21</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_21</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_22">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_22</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_22</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_23">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_23</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_23</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_24">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_24</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_24</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_25">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_25</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_25</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_26">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_26</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_26</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_27">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_27</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_27</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_28">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_28</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_28</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_29">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_29</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_29</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_30">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_30</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_30</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_31">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_31</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_31</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_32">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_32</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_32</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_33">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_33</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_33</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_34">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_34</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_34</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_35">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_35</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_35</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_36">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_36</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_36</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_37">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_37</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_37</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_38">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_38</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_38</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_39">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_39</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_39</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_40">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_40</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_40</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_41">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_41</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_41</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_42">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_42</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_42</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="icap/&lt;const1&gt;_43">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">icap/&lt;const1&gt;_43</obj_property>
+      <obj_property name="ObjectShortName">&lt;const1&gt;_43</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

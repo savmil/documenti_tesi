@@ -22,12 +22,6 @@
 #---------------------------------------------------------------------------------------------------------------------
 # Defines for readback capture routine
 #---------------------------------------------------------------------------------------------------------------------
-# l' intestazione del bitstream caricato è la stessa di quella del documento UG470 ma con la differenza che non vi è 
-# la scrittura del codice CRC relativo al bitstream caricato, dopo l' intestazione è presente il frame di cui ho fatto 
-# readback, per scrivere una word bisogna scrivere un frame dummy prima di vedere la word voluta (per il momento scrivo 
-# un intero frame), il frame dummy va dopo il bitstream da caricare ma va indicato in dimensione nel registro FRDI, dopodichè
-# il trailer del frame è uguale a quello del UG470 e bisogna dare delle NOOP per capircare il bitstream (se ne sono presenti
-# di più vengono ignorate)
 set file_log ____rdbk.log
 set prog_ctrl 1
 set fileOutput 0
@@ -39,7 +33,7 @@ set optOverwrite 0
 set DEF_WPF 101
 
 #Defines pipeline value to add to frame count
-set DEF_FDR_PIPE_DEPTH 10
+set DEF_FDR_PIPE_DEPTH 0
 
 #Defines UltraScale JTAG instruction opcodes 
 set DEF_USER4              0x23
@@ -64,8 +58,12 @@ set DEF_CMD  00100
 set DEF_MSK  00110 
 set DEF_CTL1 11000
 set DEF_CTL0 00101
+set DEF_COR1 01110
+set DEF_COR0 01001
 set DEF_BOOTSTS 10110
 set DEF_CRC 00000
+set DEF_STATUS 00111
+set DEF_IPROG 01111
 #Defines UltraScale syncword
 set DEF_SYNCWORD AA995566
 
@@ -425,7 +423,7 @@ proc xGetDataLine { argFilePtr argData argRowLength } {
 
 }; # end of xGetDataLine
 
-proc crea_pacchetto_scrittura {} {
+proc crea_pacchetto_scrittura {file} {
   global DEF_CMD
   global DEF_WPF
   global DEF_FDR_PIPE_DEPTH
@@ -456,13 +454,26 @@ proc crea_pacchetto_scrittura {} {
   global DEF_CBC  
   global DEF_AXSS  
   global DEF_TIMER 
-  global DEF_CRC 	
+  global DEF_CRC 
+	
   #preambolo
   set sTmp ffffffff
   #sync
   append sTmp $DEF_SYNCWORD
   #NOOP
   append sTmp 20000000
+ #CMD W
+  set    sTmp2 $DEF_TYPE_1
+  append sTmp2 $DEF_WRITE 
+  append sTmp2 000000
+  append sTmp2 000
+  append sTmp2 $DEF_CMD
+  append sTmp2 00
+  append sTmp2 00000000001
+
+  #append sTmp [conv2hex 32 $sTmp2]
+  #shutdown
+  #append sTmp 0000000B
   #CMD W
   set    sTmp2 $DEF_TYPE_1
   append sTmp2 $DEF_WRITE 
@@ -472,18 +483,17 @@ proc crea_pacchetto_scrittura {} {
   append sTmp2 00
   append sTmp2 00000000001
 
-  append sTmp [conv2hex 32 $sTmp2]
+  #append sTmp [conv2hex 32 $sTmp2]
   #AHIGH
-  append sTmp 00000008
-
-  set file [open /home/saverio/Scrivania/tesi/gaffe-xilinx-master/bitstream_ascii.bit]
+  #append sTmp 00000008
+ 
+  set file [open $file]
   set input [read $file]
   set lines [split $input "\n"]
   set stripped [string map {" " ""}  $lines ]
   set strip [string range $stripped 0 end-2] 
   set hex $strip
   append sTmp $strip
-
   #puts $strip
   set    sTmp2 $DEF_TYPE_1
   append sTmp2 $DEF_WRITE 
@@ -492,17 +502,87 @@ proc crea_pacchetto_scrittura {} {
   append sTmp2 $DEF_CMD
   append sTmp2 00
   append sTmp2 00000000001
-
-  append sTmp [conv2hex 32 $sTmp2]
+  #append sTmp 30020001
+  #append sTmp 00000000
+  #append sTmp 20000000
+  #append sTmp 30008001
+  #append sTmp 0000000F
+  #append sTmp [conv2hex 32 $sTmp2]
   #BHIGH
-  append sTmp 00000003
+  #append sTmp 00000003
+  set    sTmp2 $DEF_TYPE_1
+  append sTmp2 $DEF_WRITE 
+  append sTmp2 000000
+  append sTmp2 000
+  append sTmp2 $DEF_CMD
+  append sTmp2 00
+  append sTmp2 00000000001
+
+  #append sTmp [conv2hex 32 $sTmp2]
+  #BHIGH
+  #append sTmp 0000000F
+
+  
 
 
 
 
   return $sTmp
 }
-proc crea_pacchetto_lettura {argFrameCount} {
+proc leggi_boots {argFrameCount} {
+  global DEF_CMD
+  global DEF_WPF
+  global DEF_FDR_PIPE_DEPTH
+  global DEF_SYNCWORD
+  global DEF HDR_W1_CMD
+  global DEF_WPF
+  global DEF_FDR_PIPE_DEPTH
+  global DEF_TYPE_1
+  global DEF_TYPE_2
+  global DEF_WRITE
+  global DEF_READ
+  global DEF_FAR
+  global DEF_NULL_CMD
+  global DEF_FDRO
+  global DEF_IDCODE  
+  global DEF_FDRI  
+  global DEF_MSK  
+  global DEF_CTL1  
+  global DEF_CTL0  
+  global DEF_STAT  
+  global DEF_BOOTSTS  
+  global DEF_COR0  
+  global DEF_COR1  
+  global DEF_BSPI  
+  global DEF_WBSTAR  
+  global DEF_CRC  
+  global DEF_MFWR  
+  global DEF_CBC  
+  global DEF_AXSS  
+  global DEF_TIMER 
+  global DEF_STATUS
+   global DEF_IPROG
+   
+  set sTmp ffffffff
+  append sTmp $DEF_SYNCWORD
+#-------------------------------
+# Add NO_OP command - 20000000
+#-------------------------------
+  append sTmp 20000000
+	
+  set    sTmp2 $DEF_TYPE_1
+  append sTmp2 $DEF_READ
+  append sTmp2 000000
+  append sTmp2 000
+  append sTmp2 $DEF_COR0
+  append sTmp2 00
+  append sTmp2 00000000000
+
+  append sTmp [conv2hex 32 $sTmp2] 
+  #append sTmp FFFFFFFF
+
+}
+proc crea_pacchetto_lettura {argFrameCount frame} {
   global DEF_CMD
   global DEF_WPF
   global DEF_FDR_PIPE_DEPTH
@@ -683,6 +763,7 @@ proc crea_pacchetto_lettura {argFrameCount} {
 #-------------------------------
 # Add HDR_W1_CMD
 #-------------------------------
+
   set    sTmp2 $DEF_TYPE_1
   append sTmp2 $DEF_WRITE
   append sTmp2 000000
@@ -702,23 +783,6 @@ proc crea_pacchetto_lettura {argFrameCount} {
   append sTmp 20000000
   append sTmp 20000000
   append sTmp 20000000
-#-------------------------------
-# Add HDR_W1_FAR
-#-------------------------------
-  set    sTmp2 $DEF_TYPE_1
-  append sTmp2 $DEF_WRITE
-  append sTmp2 000000
-  append sTmp2 000
-  append sTmp2 $DEF_FAR
-  append sTmp2 00
-  append sTmp2 00000000001
-
-  append sTmp [conv2hex 32 $sTmp2]
-# puts "sTmp2 sTmp = $sTmp2 $sTmp"
-#-------------------------------
-# Add frame address
-#-------------------------------
-  append sTmp 00000000
 #-------------------------------
 # Add HDR_W1_CMD
 #-------------------------------
@@ -752,7 +816,14 @@ proc crea_pacchetto_lettura {argFrameCount} {
 #-------------------------------
 # Add frame address
 #-------------------------------
-  append sTmp 0040011f
+  #append sTmp 0040011f
+
+  #append sTmp 0002039f
+#append sTmp 0040021f
+ #append sTmp 00420f1f
+  #append sTmp 0040019f
+  append sTmp $frame
+  puts "frame $frame"
   #append sTmp 00000000
 #-------------------------------
 # Add HDR_RNF_FDRO
@@ -792,7 +863,7 @@ proc crea_pacchetto_lettura {argFrameCount} {
 #-------------------------------
 # Add NO_OP command - 20000000
 #-------------------------------
-  append sTmp 20000000
+  append sTmp 30008001
 #  puts "sTmp = $sTmp"
 
 #-------------------------------
@@ -858,7 +929,7 @@ proc crea_pacchetto_lettura {argFrameCount} {
 #-------------------------------
 # Add NO_OP command - 20000000
 #-------------------------------
-  append sTmp 20000000
+  append sTmp 0000000D
   puts "sTmp = $sTmp"
 
 #-------------------------------
@@ -883,7 +954,7 @@ proc apri_hardware_server_jtag {} {
   open_hw_target -jtag_mode true
 }
 
-proc scrivi_bitstream {} {
+proc scrivi_bitstream {file} {
   set sOperationStart [clock format [clock seconds]]
 
   global fileOutput
@@ -902,14 +973,13 @@ proc scrivi_bitstream {} {
   setHexRevTbl
   setHexBinTbl
 
-  set sTmpVar [crea_pacchetto_scrittura]
-  set iBitCount [expr ([string length $sTmpVar] * 4)]
+  set sTmpVar [crea_pacchetto_scrittura $file]
   set sTdiData [revHexData $sTmpVar]
   #puts "sTdiData = $sTdiData"
   set dati_da_scrivere [expr (([string length $sTdiData] * 4))]
-  scan_ir_hw_jtag 6 -tdi $DEF_JSHUTDOWN
-  runtest_hw_jtag -tck 10000
-  scan_ir_hw_jtag 6 -tdi $DEF_BYPASS 
+  #scan_ir_hw_jtag 6 -tdi $DEF_JSHUTDOWN
+  #runtest_hw_jtag -tck 10000
+  #scan_ir_hw_jtag 6 -tdi $DEF_BYPASS 
   scan_ir_hw_jtag 6 -tdi $DEF_JCONFIG
   
   scan_dr_hw_jtag $dati_da_scrivere -tdi $sTdiData
@@ -920,7 +990,7 @@ proc scrivi_bitstream {} {
 
   #scan_ir_hw_jtag 6 -tdi $DEF_BYPASS
 }
-proc leggi_frame {argfile_log_name argFrameCount argOverwrite} {
+proc leggi_frame {argfile_log_name frame argFrameCount argOverwrite} {
 
   set argFormat 1 
 
@@ -950,13 +1020,14 @@ proc leggi_frame {argfile_log_name argFrameCount argOverwrite} {
    return
   }
   #set sTmpVar [leggi_reg ]
-  set sTmpVar [crea_pacchetto_lettura $argFrameCount]
+  #set sTmpVar [leggi_boots $argFrameCount]
+  set sTmpVar [crea_pacchetto_lettura $argFrameCount $frame]
   set iBitCount [expr ([string length $sTmpVar] * 4)]
   set sTdiData [revHexData $sTmpVar]
   #puts "sTdiData = $sTdiData"
   set iRdbkCmdLength [expr ([string length $sTdiData] * 4)]
   puts "Rdbk cmd length = $iRdbkCmdLength"
-   
+  puts $sTmpVar   
   scan_ir_hw_jtag 6 -tdi $DEF_JCONFIG
   scan_dr_hw_jtag $iRdbkCmdLength -tdi $sTdiData
   set iReadbackCount [expr (($DEF_WPF * ($argFrameCount ) ) * 32)]

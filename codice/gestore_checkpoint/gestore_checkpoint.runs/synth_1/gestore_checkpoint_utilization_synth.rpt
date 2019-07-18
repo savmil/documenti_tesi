@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed Jul  3 17:00:59 2019
+| Date         : Thu Jul 18 13:31:02 2019
 | Host         : saverio-UX530UX running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -file gestore_checkpoint_utilization_synth.rpt -pb gestore_checkpoint_utilization_synth.pb
 | Design       : gestore_checkpoint
@@ -148,8 +148,8 @@ Table of Contents
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
 | FDRE      | 7947 |        Flop & Latch |
-| LUT6      | 6967 |                 LUT |
-| LUT5      | 3608 |                 LUT |
+| LUT6      | 6970 |                 LUT |
+| LUT5      | 3605 |                 LUT |
 | LUT4      | 2178 |                 LUT |
 | MUXF7     | 1210 |               MuxFx |
 | MUXF8     |  184 |               MuxFx |

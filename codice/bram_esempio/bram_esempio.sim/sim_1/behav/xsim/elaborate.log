@@ -1,0 +1,21 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 644d6194dbf546628e5dee51902da8a6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot bram_sim_behav xil_defaultlib.bram_sim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port DOADO [/wrk/2018.2/continuous/2018_06_14_2258646/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:1799]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 4 for port DOPADOP [/wrk/2018.2/continuous/2018_06_14_2258646/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:1801]
+WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 32 for port DIADI [/wrk/2018.2/continuous/2018_06_14_2258646/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:1812]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 4 for port DIPADIP [/wrk/2018.2/continuous/2018_06_14_2258646/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:1814]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 4 for port WEA [/wrk/2018.2/continuous/2018_06_14_2258646/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:1826]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b01,RDADDR_...
+Compiling module unimacro_ver.BRAM_SINGLE_MACRO(BRAM_SIZE="36K...
+Compiling module xil_defaultlib.bram
+Compiling module xil_defaultlib.bram_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot bram_sim_behav

@@ -1,0 +1,10 @@
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/saverio/Scrivania/codice_tesi/esempio_un_registro/esempio_un_registro.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/saverio/Scrivania/codice_tesi/esempio_un_registro/esempio_un_registro.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Wed Jul 10 09:24:06 2019. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00.67 ; elapsed = 00:00:05 . Memory (MB): peak = 295.922 ; gain = 0.000 ; free physical = 9396 ; free virtual = 13064
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul 10 09:24:06 2019...
