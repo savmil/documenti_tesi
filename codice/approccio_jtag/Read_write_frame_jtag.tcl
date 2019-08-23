@@ -423,7 +423,7 @@ proc xGetDataLine { argFilePtr argData argRowLength } {
 
 }; # end of xGetDataLine
 
-proc crea_pacchetto_scrittura {file} {
+proc build_write_packet {file} {
   global DEF_CMD
   global DEF_WPF
   global DEF_FDR_PIPE_DEPTH
@@ -582,7 +582,7 @@ proc leggi_boots {argFrameCount} {
   #append sTmp FFFFFFFF
 
 }
-proc crea_pacchetto_lettura {argFrameCount frame} {
+proc build_read_packet {argFrameCount frame} {
   global DEF_CMD
   global DEF_WPF
   global DEF_FDR_PIPE_DEPTH
@@ -948,13 +948,13 @@ proc crea_pacchetto_lettura {argFrameCount frame} {
 proc revData {argHexPattern argBitCount} {
 
 }; # end of revData
-proc apri_hardware_server_jtag {} {
+proc open_jtag_server {} {
   open_hw
   connect_hw_server
   open_hw_target -jtag_mode true
 }
 
-proc scrivi_bitstream {file} {
+proc write_bitstream {file} {
   set sOperationStart [clock format [clock seconds]]
 
   global fileOutput
@@ -973,7 +973,7 @@ proc scrivi_bitstream {file} {
   setHexRevTbl
   setHexBinTbl
 
-  set sTmpVar [crea_pacchetto_scrittura $file]
+  set sTmpVar [build_write_packet $file]
   set sTdiData [revHexData $sTmpVar]
   #puts "sTdiData = $sTdiData"
   set dati_da_scrivere [expr (([string length $sTdiData] * 4))]
@@ -990,7 +990,7 @@ proc scrivi_bitstream {file} {
 
   #scan_ir_hw_jtag 6 -tdi $DEF_BYPASS
 }
-proc leggi_frame {argfile_log_name frame argFrameCount argOverwrite} {
+proc read_frame {argfile_log_name frame argFrameCount argOverwrite} {
 
   set argFormat 1 
 
@@ -1021,7 +1021,7 @@ proc leggi_frame {argfile_log_name frame argFrameCount argOverwrite} {
   }
   #set sTmpVar [leggi_reg ]
   #set sTmpVar [leggi_boots $argFrameCount]
-  set sTmpVar [crea_pacchetto_lettura $argFrameCount $frame]
+  set sTmpVar [build_read_packet $argFrameCount $frame]
   set iBitCount [expr ([string length $sTmpVar] * 4)]
   set sTdiData [revHexData $sTmpVar]
   #puts "sTdiData = $sTdiData"

@@ -49,19 +49,19 @@ proc searchinfile {filename component} {
 		#append bram " "
 		set i 0
 		set f 0
-		set num_frame 0
-		set frame_da_saltare -1
+		set frame_num 0
+		set avoid_frame -1
 		puts "prima bram $bram"
-		set stessa_word 0
+		set same_word 0
 		#array set offset {}
 		puts "dict [dict get $mydict $frame]"
 		# per ogni offset vedo quanti salti ci sono
 		set offset [dict get $mydict $frame]
 		puts [lindex $offset 0]
-		set numero_frame [llength $offset]
-		while { $num_frame< $numero_frame } { 
+		set frame_number [llength $offset]
+		while { $frame_num< $frame_number } { 
 				
-			set f [expr [lindex $offset $num_frame] / 32]
+			set f [expr [lindex $offset $frame_num] / 32]
 			puts "numero frame $f"
 			set f [expr $f-$i]
 			puts "numero frame -i $f"
@@ -84,54 +84,54 @@ proc searchinfile {filename component} {
 				}
 				
 			}
-			#puts "offset [lindex $offset $num_frame]"
+			#puts "offset [lindex $offset $frame_num]"
 			#puts "contatore $i"
 			
-			set off [expr [lindex $offset $num_frame]]
+			set off [expr [lindex $offset $frame_num]]
 			#calcolo le mashere bit appartenti alla stessa maschera mi danno lo stesso i
 			while {$i==[expr $off /32] } {
 					puts "i $i"
 					puts "off [expr $off /32]" 
 					#append bram " salto"
-					#append bram [format %X $frame_da_saltare] 
+					#append bram [format %X $avoid_frame] 
 					#append bram " "
-					#puts "frame_da_saltare $frame_da_saltare"
-					#set frame_da_saltare -1
+					#puts "avoid_frame $avoid_frame"
+					#set avoid_frame -1
 					#append bram "word"
 					puts "offset $off"
-					puts "stessa word $stessa_word"
-					if {$stessa_word==0} {
+					puts "stessa word $same_word"
+					if {$same_word==0} {
 						set word [expr 1 << [expr $off % 32]]
 					} else {
 					set word [expr $word | [expr 1 << [expr $off % 32]]]
 					puts " sono qui"
-					puts "word stessa_word [format %X [expr $word]]"
+					puts "word same_word [format %X [expr $word]]"
 					}
-					set stessa_word 1
+					set same_word 1
 					#append bram [format %X [expr $word]]
 					#puts "word $word"
 					#append bram [format %X [expr $offset % 32]]
 					#puts [format %x [expr $offset % 32]]
 					#append bram " "
-					set num_frame [expr $num_frame +1]
-					puts $num_frame
-					set off [lindex $offset $num_frame]
-					puts  [lindex $offset $num_frame]
-					if { $num_frame ==32  } {
+					set frame_num [expr $frame_num +1]
+					puts $frame_num
+					set off [lindex $offset $frame_num]
+					puts  [lindex $offset $frame_num]
+					if { $frame_num ==32  } {
 						set off [expr $i*32+32+1]
 					}
 					
 				} 
-				set lunghezza_word [string length $word]
-				while {$lunghezza_word<9 } {
+				set word_length [string length[format %X [expr $word]]]
+				while {$word_length<8 } {
 					append bram 0
-					set lunghezza_word [expr $lunghezza_word+1]
+					set word_length [expr $word_length+1]
 				}
 				puts "dimensione word [string length $word]"
 				append bram [format %X [expr $word]]
 				append bram 0
-				set stessa_word 0
-				#set num_frame [expr $num_frame +1]
+				set same_word 0
+				#set frame_num [expr $frame_num +1]
 				puts "word [format %X [expr $word]]"
 
 			#puts "numero word $f"
@@ -139,29 +139,29 @@ proc searchinfile {filename component} {
 			
 			
 			# while {$i<$offset} {
-			# 		if {$stessa_word ==1} {
-			# 			set stessa_word 0
+			# 		if {$same_word ==1} {
+			# 			set same_word 0
 			# 			#append bram "word"
 			# 			append bram [format %08X $word]
 			# 			#puts "word [format %X $word] "
 			# 		}
 			# 		#al massimo saltiamo 15 frame
-			# 		if {$frame_da_saltare<15} {
+			# 		if {$avoid_frame<15} {
 			# 			set i [expr {$i + 32}]
-			# 			set frame_da_saltare [expr {$frame_da_saltare + 1}]
-			# 			puts "qui $frame_da_saltare"
+			# 			set avoid_frame [expr {$avoid_frame + 1}]
+			# 			puts "qui $avoid_frame"
 
 
 			# 		} else {
 			# 			#append bram " salto"
 			# 			set i [expr {$i + 32}]
 			# 			append bram 00000000 
-			# 			#append bram [format %X $frame_da_saltare] 
+			# 			#append bram [format %X $avoid_frame] 
 			# 			#append bram " "
 						
 			# 			#append bram " "
 						
-			# 			#set frame_da_saltare -1
+			# 			#set avoid_frame -1
 						
 			# 		}
 			# 	}
@@ -170,12 +170,12 @@ proc searchinfile {filename component} {
 			# 	#poichè può darsi che due offset siano nella stessa word
 				
 
-			# 	if {$stessa_word ==0} {
+			# 	if {$same_word ==0} {
 			# 		#append bram " salto"
-			# 		append bram [format %X $frame_da_saltare] 
+			# 		append bram [format %X $avoid_frame] 
 			# 		#append bram " "
-			# 		puts "frame_da_saltare $frame_da_saltare"
-			# 		set frame_da_saltare -1
+			# 		puts "avoid_frame $avoid_frame"
+			# 		set avoid_frame -1
 			# 		#append bram "word"
 			# 		set word [expr 1 << [expr $offset % 32]]
 			# 		#puts "word $word"
@@ -183,7 +183,7 @@ proc searchinfile {filename component} {
 			# 		#puts [format %x [expr $offset % 32]]
 			# 		#append bram " "
 			# 		set f [expr {$f +1 }]
-			# 		set stessa_word 1
+			# 		set same_word 1
 			# 	} else {
 					
 			# 		set sec_word [expr 1 << [expr $offset % 32]]
@@ -201,42 +201,42 @@ proc searchinfile {filename component} {
 			
 		}
 		#puts $i
-		#puts "f_s $frame_da_saltare"
+		#puts "f_s $avoid_frame"
 		#riempio di salti e zero fino a che non riempio il frame
 		set i [expr $i*32]
 
 		while {$i<3232} {
 				
-				if {$frame_da_saltare<15} {
+				if {$avoid_frame<15} {
 					set i [expr {$i + 32}]
-					set frame_da_saltare [expr {$frame_da_saltare + 1}]
-					#puts "qui $frame_da_saltare"
+					set avoid_frame [expr {$avoid_frame + 1}]
+					#puts "qui $avoid_frame"
 
 				} else {
 					#append bram "word "
 					append bram 00000000 
 					#append bram " "
 					#append bram " salto"
-					append bram [format %X $frame_da_saltare] 
+					append bram [format %X $avoid_frame] 
 					#append bram " "
 					
 					
-					set frame_da_saltare -1
+					set avoid_frame -1
 					#puts $i
-					#puts $frame_da_saltare
+					#puts $avoid_frame
 				}
 			}
 			puts "bit a cui sono arrivato $i"
 			#se non ho scritto l' ultimo salto
-			if {$frame_da_saltare!=0} {
+			if {$avoid_frame!=0} {
 				#append bram "word "
 				append bram 00000000 
 				#append bram " "
 				#append bram " salto"
-				append bram [format %X [expr $frame_da_saltare-1]] 
-				#append bram $frame_da_saltare
+				append bram [format %X [expr $avoid_frame-1]] 
+				#append bram $avoid_frame
 				#append bram " "
-				set frame_da_saltare -1
+				set avoid_frame -1
 			}
 			#puts $i
 			set i 0

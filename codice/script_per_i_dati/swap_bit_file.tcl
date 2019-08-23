@@ -84,8 +84,8 @@ proc changebit {filename_source filename_dest list_offset_source list_offset_des
 	array set l_o_d $list_offset_dest
 	array set l_n_s $list_net_source
 	array set l_n_d $list_net_dest
-	array set da_scambiare_source {}
-	array set da_scambiare_dest {}
+	array set to_change_source {}
+	array set to_change_dest {}
 	puts "qui"
 	#mi serve per ottenere dal file sorgente i bit da scrivere nel file di destinazione
 	while {[gets $file line] != -1} {
@@ -107,7 +107,7 @@ proc changebit {filename_source filename_dest list_offset_source list_offset_des
 					#al valore dell' offset aggiungo 1 perchè non parto da 0
 					if {[expr $l_o_s($frame_number)+1] == $bit_number} {
 						#mi salvo la posizione del bit nel file sorgente ed il valore da sostituire
-						append da_scambiare_source($bit_number) [string index $line $pos_in_line]
+						append to_change_source($bit_number) [string index $line $pos_in_line]
 						if {$frame_number >= [expr [array size l_o_s] -1] } {
 							
 						} else { 
@@ -121,18 +121,18 @@ proc changebit {filename_source filename_dest list_offset_source list_offset_des
 			}
 		}
 	}
-	puts "informazioni da scambiare sorgente [array get da_scambiare_source] "
+	puts "informazioni da scambiare sorgente [array get to_change_source] "
 	#creo una lista dei valori che devo scrivere nel file di destinazione con le loro posizioni
 	foreach  {key value}  [array get l_n_s] {
     	foreach  {key1 value1}  [array get l_n_d] {
     		if {$value==$value1 } {
-    			puts $da_scambiare_source([expr $key+1])
-    			append da_scambiare_dest([expr $key1+1]) $da_scambiare_source([expr $key+1])
+    			puts $to_change_source([expr $key+1])
+    			append to_change_dest([expr $key1+1]) $to_change_source([expr $key+1])
     			puts "chiavi $key $key1 "
     		}
     	}
 	}
-	puts "informazioni da scambiare destinazione [array get da_scambiare_dest] "
+	puts "informazioni da scambiare destinazione [array get to_change_dest] "
 	set bit_number 0
 	set line_number 0
 	set frame_number 0
@@ -161,7 +161,7 @@ proc changebit {filename_source filename_dest list_offset_source list_offset_des
 					#al valore dell' offset aggiungo 1 perchè non parto da 0
 					#puts "offset dest $l($frame_number) "
 					if {[expr $l_o_d($frame_number)+1] == $bit_number} {
-						puts "da scambiare $da_scambiare_dest($bit_number)"
+						puts "da scambiare $to_change_dest($bit_number)"
 						#puts $l($frame_number)
 						#puts "qui"
 						if {$frame_number >= [expr [array size l_o_d] -1] } {
@@ -171,7 +171,7 @@ proc changebit {filename_source filename_dest list_offset_source list_offset_des
 							set frame_number [expr $frame_number +1]
 						}
 						#puts $frame_number [string index $line $pos_in_line]
-						append frame $da_scambiare_dest($bit_number)
+						append frame $to_change_dest($bit_number)
 
 					} else {
 						
